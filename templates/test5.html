@@ -1,0 +1,8 @@
+{% extends "sample.html" %}
+{% block content %}
+    {% if content.thing == 'some stuff' %}
+        <div>If executed</div>
+    {% else %}
+        <div>Else executed</div>
+    {% endif %}
+{% endblock content %}

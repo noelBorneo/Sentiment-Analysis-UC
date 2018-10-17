@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% if output.prediction == 'Positive' %}
+        <img src="/static/img/images/positive.png" alt="postive.jpg"/>
+    {% else %}
+        <img src="/static/img/images/negative.png" alt="negative.jpg"/>
+
+    {% endif %}
+
+    <p>{{query}}</p>
+    <p>Confidence value: {{output.confidence}}</p>
+
+<textarea name="previousQueries" id="prevQ" cols="30" rows="10">{{lis}}</textarea>
+{% endblock content %}
